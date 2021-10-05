@@ -1,0 +1,30 @@
+.product-ads-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.product-ads-container .signin-ad{
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.product-ads-container .signin-ad .title{
+    font-size: 21px;
+    font-weight: 700;
+    width: 80%;
+    margin-bottom: 10px;
+}
+.product-ads-container .signin-ad .button{
+    font-size: 13px;
+    font-weight: 400;
+    background: rgb(245, 241, 24);
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+.product-ads-container .ad-img{
+    width: 90%;
+    margin: 20px auto;
+}
