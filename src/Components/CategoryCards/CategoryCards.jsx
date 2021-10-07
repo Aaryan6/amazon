@@ -1,11 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./productCards.css";
+import "./CategoryCards.css";
 
-const ProductCards = ({product}) => {
+const CategoryCards = ({product}) => {
   return (
-    <Link to="/product-list" style={{textDecoration: "none", color: "inherit"}}>
-          <div className="product-card">
+          <div className="product-card" key={product?.id}>
             <span className="card-header">
               Up to 40% off | Mobiles & accessories
             </span>
@@ -14,8 +12,7 @@ const ProductCards = ({product}) => {
             </div>
             <span className="card-footer">See all Offers</span>
           </div>
-          </Link>
   );
 };
 
-export default ProductCards;
+export default CategoryCards;

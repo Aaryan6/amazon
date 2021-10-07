@@ -1,9 +1,8 @@
 .products-container{
     z-index: 200;
     position: relative;
-    top: -310px;
     max-width: 96%;
-    margin: 0 auto;
+    margin: -310px auto 0;
 }
 .home-tagline{
     background: #fff;
@@ -22,7 +21,7 @@
 }
 .products{
     display: flex;
-    margin-top: 20px;
+    margin: 20px auto 0;
 }
 .product-cards{
     display: flex;

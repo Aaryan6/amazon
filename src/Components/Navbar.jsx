@@ -6,6 +6,7 @@ import {
   ShoppingCartOutlined,
 } from "@mui/icons-material";
 import { Menu } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const Topbar = styled.div`
   position: sticky;
@@ -147,7 +148,7 @@ const BottomNav = styled.div`
   display: flex;
   align-items: center;
   padding: 0 10px;
-  svg{
+  svg {
     fill: #fff !important;
   }
 `;
@@ -167,8 +168,9 @@ const Navbar = () => {
       <Topbar>
         <Nav>
           <NavLeft>
-            <Logo src="/assets/amazon-logo.svg" alt="" />
-
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Logo src="/assets/amazon-logo.svg" alt="" />
+            </Link>
             <Address>
               <RoomOutlined
                 style={{
@@ -197,24 +199,28 @@ const Navbar = () => {
           </NavCenter>
           <NavRight>
             <IndianFlag src="/assets/india.png" alt="" />
+            <Link to="/signin" style={{textDecoration: "none", color:"#fff", cursor: "pointer"}}>
             <AccountDetail>
               <AcTopText>Hello, Sign in</AcTopText>
               <AcBottomText>Account & Lists</AcBottomText>
             </AccountDetail>
+              </Link>
             <OrderDetail>
               <OrTop>Returns</OrTop>
               <OrBottom>& Orders</OrBottom>
             </OrderDetail>
             <Basket>
+              <Link to="/cart" style={{textDecoration: "none", color:"#fff", cursor: "pointer",display:"flex",alignItems:"end"}}>
               <ShoppingCartOutlined />
               <Cart>Cart</Cart>
+              </Link>
             </Basket>
           </NavRight>
         </Nav>
       </Topbar>
       <BottomBar>
         <BottomNav>
-          <Menu/>
+          <Menu />
           <Options>All</Options>
           <Options>Mobile</Options>
           <Options>Best Sellers</Options>
@@ -227,7 +233,7 @@ const Navbar = () => {
           <Options>Computers</Options>
           <Options>Home & Kitchen</Options>
           <Options>New Releases</Options>
-          <AdImage src="/assets/shopnow.jpg" alt=""/>
+          <AdImage src="/assets/shopnow.jpg" alt="" />
         </BottomNav>
       </BottomBar>
     </>
